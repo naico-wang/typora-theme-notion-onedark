@@ -15,8 +15,8 @@
 
   --code-fence-text-color: #bbbbbb;
   --code-fence-bg-color: #21252b;
-  --code-fense-inline-bg-color: #e1e1e1;
-  --code-fense-inline-text-color: #ff0000;
+  --code-fense-inline-bg-color: #efefef;
+  --code-fense-inline-text-color: #448361;
 
   --blockquote-bg-color: #f9f9f9;
   --blockquote-accent-color: var(--text-color);
@@ -82,7 +82,8 @@
   /* Code variables */
   --cm-line: #bbbbbb;
   --cm-variable: #d55fde;
-  --cm-keyword: #e5c07b;
+  --cm-keyword: #d55fde;
+  --cm-type: #d55fde;
   --cm-tag: #ef596f;
   --cm-bracket: #9b3636;
   --cm-error: #9b3636;
@@ -463,7 +464,7 @@ tt {
   color: var(--code-fence-text-color);
   background-color: var(--code-fence-bg-color);
   border-radius: var(--border-radius);
-  padding: 2px 4px;
+  padding: 4px;
   font-size: 1em;
   font-weight: normal;
   font-family: var(--monospace)
@@ -472,13 +473,17 @@ tt {
 .md-pair-s code {
   background-color: var(--code-fense-inline-bg-color);
   color: var(--code-fense-inline-text-color);
+  border-color: var(--code-fence-text-color);
+  font-size: 0.857em;
 }
 
 .md-fences {
   margin-bottom: 15px;
   margin-top: 15px;
-  padding-top: 8px;
-  padding-bottom: 6px;
+  padding: 10px;
+  border-radius: 8px;
+  border: none;
+  box-shadow: 0 10px 10px var(--code-border-color);
 }
 
 #write pre.md-meta-block {
@@ -742,6 +747,10 @@ pre.CodeMirror-line {
 
 .cm-keyword {
   color: var(--cm-keyword) !important
+}
+
+.cm-type {
+  color: var(--cm-type) !important
 }
 
 .cm-tag {
