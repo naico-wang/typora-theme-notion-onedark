@@ -15,10 +15,10 @@
 
   --code-fence-text-color: #bbbbbb;
   --code-fence-bg-color: #21252b;
-  --code-fense-inline-bg-color: #efefef;
-  --code-fense-inline-text-color: #448361;
+  --code-fense-inline-bg-color: #feecc8;
+  --code-fense-inline-text-color: #222222;
 
-  --blockquote-bg-color: #f9f9f9;
+  --blockquote-bg-color: #f3f5f7;
   --blockquote-accent-color: var(--text-color);
   --blockquote-text-color: var(--text-color);
 
@@ -36,8 +36,8 @@
   --search-hit-text-color: #d44c47;
   --search-hit-bg-color: #fdebec;
 
-  --url-text-color: black;
-  --url-underline-color: #37352f;
+  --url-text-color: #00000;
+  --url-underline-color: #222222;
 
   --footnote-text-color: #f7f6f3;
   --footnote-bg-color: #888884;
@@ -250,26 +250,26 @@ h6::before {
 
 h1::before {
   content: 'H1';
-  bottom: 1rem;
+  bottom: 1em;
 }
 h2::before {
   content: 'H2';
-  bottom: .85rem;
+  bottom: .85em;
 }
 h3::before, h3.md-focus:before {
   content: 'H3';
-  top: .44rem;
+  top: .8em;
 }
 h4::before, h4.md-focus:before {
   content: 'H4';
 }
 h5::before, h5.md-focus:before {
   content: 'H5';
-  top: .05rem;
+  top: .05em;
 }
 h6::before, h6.md-focus:before {
   content: 'H6';
-  top: .05rem;
+  top: .05em;
 }
 
 h3.md-focus:before, h4.md-focus:before, h5.md-focus:before, h6.md-focus:before {
@@ -310,6 +310,7 @@ hr {
 a,
 .md-def-url {
   color: var(--url-text-color);
+  font-weight: bold;
   text-decoration: none;
   border-bottom: 0.05em solid;
   border-color: var(--url-underline-color);
@@ -317,7 +318,7 @@ a,
 }
 
 a:hover {
-  text-decoration: none;
+  text-decoration: underline;
   opacity: 1;
 }
 
@@ -391,11 +392,10 @@ blockquote {
   color: var(--blockquote-text-color);
   margin-left: 1.75px;
   margin-right: 0px;
-  border-left: 4px solid var(--blockquote-accent-color);
+  border-left: 0.5rem solid var(--blockquote-accent-color);
   padding: 10px 14px 7px 22px;
   /* change the quote highlight */
   background-color: var(--blockquote-bg-color);
-  border-radius: var(--border-radius);
 }
 
 blockquote blockquote {
@@ -950,11 +950,11 @@ megamenu-back-btn {
 }
 
 .md-alert {
-  background-color: #f9f9f9;
+  background-color: #f3f5f7;
   padding-top: 0.25rem;
   padding-bottom: 0.5rem;
-  border-radius: 6px;
-  border-left-width: 4px;
+  border-left-width: 0.5rem;
+  border-left-color: #42B985;
 }
 
 .md-alert-text {
