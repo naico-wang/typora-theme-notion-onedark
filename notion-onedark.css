@@ -2,6 +2,7 @@
   /* Text editor */
   --bg-color: #ffffff;
   --text-color: #222222;
+  --text-color-dark: #000000;
   --body-text-color: #222222;
   --code-border-color: #cccccc;
   --text-cursor-color: #bbbbbb;
@@ -533,16 +534,33 @@ tt {
 
 #write .code-tooltip {
   bottom: initial;
-  top: 100%;
+  line-height: 2;
+  top: 4px;
   left: initial;
-  right: -1px;
-  background: var(--code-fence-bg-color);
-  color: var(--code-fence-inline-text-color);
+  right: 4px;
+  background: var(--bg-color-dark);
+  color: var(--text-color-dark);
   border: 1px solid var(--code-fence-bg-color);
-  border-top-left-radius: 0;
-  border-top-right-radius: 0;
-  border-top: 0;
-  font-family: var(--monospace);
+  min-width: 10em;
+  font-family: var(--font-family);
+  font-size: 1em;
+  padding-left: 40px;
+}
+
+#write .code-tooltip::before {
+  content: 'Code: ';
+  width: 4em;
+  line-height: 2.25;
+  position: absolute;
+  top: 0;
+  left: 0.75em;
+  font-weight: 700;
+}
+
+#write .code-tooltip .ty-input, .code-tooltip input {
+  line-height: 2;
+  font-weight: bold;
+  border: none;
 }
 
 #write .md-mathblock-panel .code-tooltip {
