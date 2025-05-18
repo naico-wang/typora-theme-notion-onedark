@@ -376,7 +376,7 @@ mark {
 .cm-search-hit.CodeMirror-selectedtext,
 .md-search-hit.md-search-select,
 .md-search-select {
-  outline: 0px solid var(--search-select-text-color);
+  outline: 0 solid var(--search-select-text-color);
 }
 
 .outline-item.select,
@@ -386,13 +386,13 @@ mark {
 }
 
 .outline-item.select {
-  outline-offset: 0px;
+  outline-offset: 0;
 }
 
 blockquote {
   color: var(--blockquote-text-color);
   margin-left: 1.75px;
-  margin-right: 0px;
+  margin-right: 0;
   border-left: 0.5rem solid var(--blockquote-accent-color);
   padding: 10px 14px 7px 22px;
   /* change the quote highlight */
@@ -617,7 +617,7 @@ tt {
 /* TODO */
 .md-image>.md-meta {
   border-radius: var(--border-radius);
-  padding: 2px 0px 0px 4px;
+  padding: 2px 0 0 4px;
   font-size: 0.9em;
   color: inherit;
 }
@@ -635,7 +635,7 @@ tt {
   font-family: var(--monospace);
   font-size: var(--font-size) !important;
   font-style: normal;
-  font-weight: medium;
+  font-weight: 500;
 }
 
 .CodeMirror.cm-s-typora-default div.CodeMirror-cursor {
@@ -747,7 +747,7 @@ tt {
 }
 
 .mac-seamless-mode #typora-sidebar {
-  color: var(--sidebar-text-color);
+  color: var(--side-bar-text-color);
   background-color: var(--side-bar-bg-color);
 }
 
@@ -844,7 +844,7 @@ pre.CodeMirror-line {
 .file-tree-node.active>.file-node-background {
   color: var(--active-file-text-color);
   background-color: var(--active-file-bg-color);
-  border-left: 0px solid var(--active-file-border-color) !important;
+  border-left: 0 solid var(--active-file-border-color) !important;
   border-color: var(--active-file-border-color) !important;
 }
 
@@ -865,8 +865,8 @@ footer {
 
 .code-tooltip {
   border-radius: 4px;
-  background-color: var(--dark-trait);
-  box-shadow: 0 25.6px 57.6px 0 rgba(0, 0, 0, .52), 0 4.8px 14.4px 0 rgba(0, 0, 0, .28) !important;
+  background-color: var(--code-fence-bg-color);
+  box-shadow: 0 26px 58px 0 rgba(0, 0, 0, .52), 0 5px 14px 0 rgba(0, 0, 0, .28) !important;
 }
 
 #sidebar-files-menu {
@@ -927,7 +927,7 @@ footer {
 
 .megamenu-menu-panel input[type='text'] {
   background: inherit;
-  border: 1px var(--text-color-secondary) solid;
+  border: 1px var(--secondary-text-color) solid;
 }
 
 #recent-file-panel-action-btn {
@@ -950,7 +950,7 @@ footer {
   color: var(--text-color);
 }
 
-megamenu-back-btn {
+.megamenu-back-btn {
   color: var(--text-color);
   border-color: var(--text-color);
 }
